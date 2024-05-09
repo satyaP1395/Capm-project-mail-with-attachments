@@ -1,0 +1,8 @@
+#calling the action :
+POST http://localhost:4004/odata/v4/EmailService/sendMail
+Content-Type: application/json
+
+{}
+
+###Calling function
+http://localhost:4004/odata/v4/EmailService/sendMail()

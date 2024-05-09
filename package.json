@@ -1,0 +1,40 @@
+{
+  "name": "email-poc-app",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.14.0",
+    "@sap-cloud-sdk/mail-client": "^3.14.0",
+    "@sap/cds": "^7",
+    "@sap/xssec": "^3.6.1",
+    "express": "^4",
+    "passport": "^0.7.0",
+    "sap-cf-mailer": "^0.0.5"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "[hybrid]": {
+        "auth": {
+          "kind": "xsuaa"
+        },
+        "mailService": {
+          "kind": "rest",
+          "credentials": {
+            "destination": "mail_destination",
+            "forwardAuthToken": true
+          }
+        }
+      }
+    }
+  }
+}

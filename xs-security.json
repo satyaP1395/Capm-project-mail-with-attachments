@@ -1,0 +1,20 @@
+{
+  "xsappname": "emailpocapp",
+  "tenant-mode": "dedicated",
+  "scopes": [
+  ],
+  "attributes": [],
+  "role-templates": [
+  ],
+  "authorities-inheritance": false,
+  "authorities": [
+
+  ],
+  "oauth2-configuration": {
+    "token-validity": 9000,
+    "redirect-uris": [
+      "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
+    ]
+  },
+  "xsenableasyncservice": "true"
+}
